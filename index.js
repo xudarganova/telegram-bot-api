@@ -4,7 +4,8 @@ const bot = new TelegramBot(TOKEN, { polling: true });
 
 bot.on("message", function (msg) {
     const chatId = msg.chat.id
-    bot.sendMessage(chatId, "salom xush kelibsiz")
+    const firstname = msg.chat.first_name
+    bot.sendMessage(chatId, `salom xush kelibsiz ${firstname}`, )
 })
 
 console.log("bot ishga tushdi ...");
